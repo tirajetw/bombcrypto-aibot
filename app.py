@@ -1,9 +1,9 @@
 # import cv2
 import pyautogui
-from time import sleep 
+from time import sleep
 
-while True :
-    for i in range(1,5):
+while True:
+    for i in range(1, 5):
         print("start in ", 5-i)
         sleep(1)
     # Refresh the screen
@@ -19,7 +19,6 @@ while True :
     pyautogui.moveTo(738, 604)
     sleep(1)
     pyautogui.click()
-
 
     # wait wallet to load
     print("wait wallet to load")
@@ -41,28 +40,28 @@ while True :
     pyautogui.click()
 
     # open heroes list.
-    pyautogui.moveTo(735, 680, 1) # move to arrowup
+    pyautogui.moveTo(735, 680, 1)  # move to arrowup
     sleep(1)
     pyautogui.click()
     sleep(1)
     pyautogui.click()
 
     # drag mouse to scroll to the bottom of list
-    pyautogui.moveTo(600, 635, 1) # move to bottom
+    pyautogui.moveTo(600, 635, 1)  # move to bottom
     sleep(1)
     pyautogui.click()
     sleep(0.5)
-    pyautogui.drag(0,-500,1,button='left')
+    pyautogui.drag(0, -500, 1, button='left')
 
     # Point(x=665, y=625) wake button
     # wake all heroes
-    pyautogui.moveTo(665, 625, 1) # move to wake button
-    for i in range(0,12):
+    pyautogui.moveTo(665, 625, 1)  # move to wake button
+    for i in range(0, 12):
         sleep(1)
         pyautogui.click()
 
     # exit heroes list Point(x=1100, y=492)
-    pyautogui.moveTo(1100, 492, 1) # move to edge of winndow
+    pyautogui.moveTo(1100, 492, 1)  # move to edge of winndow
     sleep(1)
     pyautogui.click()
     sleep(1)
@@ -72,6 +71,6 @@ while True :
     pyautogui.screenshot('screenshot.png')
 
     waitTime = 30
-    for i in range(0,waitTime):
-        print("wait ", waitTime-i ," minutes for run bot again.")
+    for i in range(0, waitTime):
+        print("wait ", waitTime-i, " minutes for run bot again.")
         sleep(60)
